@@ -1,0 +1,9 @@
+C:\Users\Administrator\Desktop\BuilderPattern\BuilderPattern\bin\Debug\BuilderPattern.exe.config
+C:\Users\Administrator\Desktop\BuilderPattern\BuilderPattern\bin\Debug\BuilderPattern.exe
+C:\Users\Administrator\Desktop\BuilderPattern\BuilderPattern\bin\Debug\BuilderPattern.pdb
+C:\Users\Administrator\Desktop\BuilderPattern\BuilderPattern\obj\Debug\BuilderPattern.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\BuilderPattern\BuilderPattern\obj\Debug\BuilderPattern.Form1.resources
+C:\Users\Administrator\Desktop\BuilderPattern\BuilderPattern\obj\Debug\BuilderPattern.Properties.Resources.resources
+C:\Users\Administrator\Desktop\BuilderPattern\BuilderPattern\obj\Debug\BuilderPattern.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\BuilderPattern\BuilderPattern\obj\Debug\BuilderPattern.exe
+C:\Users\Administrator\Desktop\BuilderPattern\BuilderPattern\obj\Debug\BuilderPattern.pdb
