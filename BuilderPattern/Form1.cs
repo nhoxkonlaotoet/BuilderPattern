@@ -15,6 +15,7 @@ namespace BuilderPattern
     public partial class Form1 : Form
     {
         public const string NAME_NONE = "None";
+        public const string TYPE_PEOPLE = "People";
         public const string TYPE_HELMET = "Helmet";
         public const string TYPE_WEAPON = "Weapon";
         public const string TYPE_SHOES = "Shoes";
@@ -77,8 +78,9 @@ namespace BuilderPattern
                            .setHP(2000)
                            .setWeapon(lstWp[5])
                            .setHelmet(lstHm[1]).build());
-
-
+            type = TYPE_PEOPLE;
+            pnlChangeEquipment.Hide();
+            listBox1.DataSource = lstPeople;
             //Weapon wp = (Weapon)listBox1.Items[0];
             //MessageBox.Show(wp.Name);
         }
@@ -113,6 +115,9 @@ namespace BuilderPattern
                 Console.WriteLine(p);
                 Console.WriteLine();
             }
+            pnlChangeEquipment.Hide();
+            type = TYPE_PEOPLE;
+            listBox1.DataSource = lstPeople;
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -121,6 +126,12 @@ namespace BuilderPattern
 
             switch (type)
             {
+                case TYPE_PEOPLE:
+                    People people = (People)listBox1.SelectedItem;
+                    panel1.helmet = people.Helmet();
+                    panel1.weapon = people.Weapon();
+                    panel1.shoes = people.Shoes();
+                    break;
                 case TYPE_HELMET:
                     if (((Helmet)listBox1.SelectedItem).Name == NAME_NONE)
                         hm = null;
@@ -167,6 +178,17 @@ namespace BuilderPattern
                     break;
                 default: break;
             }
+        }
+
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            pnlChangeEquipment.Show();
+            panel1.helmet= hm = null;
+
+            panel1.weapon= wp = null;
+            panel1.shoes=sh = null;
+            panel1.Refresh();
+            btnChangeType_Click(btnHelmet, e);
         }
     }
 
